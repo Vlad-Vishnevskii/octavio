@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-       Главная
+       <h1>Главная</h1> 
        <Link href='/blog'>Блог</Link>
        <Link href='/map'>Где купить</Link>
        <Link href='/product'>Товар</Link>
