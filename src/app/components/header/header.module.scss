@@ -7,11 +7,11 @@
   background-size: cover;
   box-sizing: border-box;
   overflow: hidden;
+  font-family: var(--font-family);
 
   * {
     box-sizing: border-box;
   }
-  //   font-family: var(--font-family);
 
   &_container {
     display: flex;
@@ -41,7 +41,7 @@
   }
 
   &_title {
-    //font-family: var(--second-family);
+    font-family: var(--second-family);
     font-weight: 500;
     font-size: 80px;
     line-height: 100%;
