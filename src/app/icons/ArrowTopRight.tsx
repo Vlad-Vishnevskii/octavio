@@ -1,7 +1,13 @@
 import React from 'react';
 
-export const ArrowTopRight = () => (
-  <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const ArrowTopRight = ({ width = 28, height = 29 }) => (
+  <svg
+    width={width}
+    height={height}
+    viewBox="0 0 28 29"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       fillRule="evenodd"
       clipRule="evenodd"

@@ -1,5 +1,7 @@
-import { CatalogCard } from './components';
 import Image from 'next/image';
+import { CatalogCard, NewsCard } from './components';
+import { PenIcon, MusicIcon, CpuIcon, HandsIcon, ArrowRight } from './icons';
+import Link from 'next/link';
 import styles from './main-page.module.scss';
 
 export default function Home() {
@@ -37,12 +39,39 @@ export default function Home() {
           </p>
           <ul className={styles.aboutAdvantages}>
             <li className={styles.aboutAdvantagesItem}>
+              <PenIcon />
               <span>Разработано и собрано во Франции</span>
             </li>
-            <li className={styles.aboutAdvantagesItem}>Гармония технологичности и музыкальности</li>
-            <li className={styles.aboutAdvantagesItem}>Чтим наследие и создаём инновации</li>
-            <li className={styles.aboutAdvantagesItem}>Сотрудничество с ведущими Hi-Fi брендами</li>
+            <li className={styles.aboutAdvantagesItem}>
+              <MusicIcon />
+              <span>Гармония технологичности и музыкальности</span>
+            </li>
+            <li className={styles.aboutAdvantagesItem}>
+              <CpuIcon />
+              <span>Чтим наследие и создаём инновации</span>
+            </li>
+            <li className={styles.aboutAdvantagesItem}>
+              <HandsIcon />
+              <span>Сотрудничество с ведущими Hi-Fi брендами</span>
+            </li>
           </ul>
+        </div>
+      </section>
+      <section className={styles.news}>
+        <div className={styles.newsTop}>
+          <h2 className={styles.newsTitle}>НОВОСТИ</h2>
+          <Link className={styles.newsAll} href="/blog">
+            Все публикации
+            <ArrowRight width={18} height={18} stroke="#808080" />
+          </Link>
+        </div>
+        <div className={styles.newsWrapper}>
+          <div className={styles.newsList}>
+            <NewsCard />
+            <NewsCard />
+            <NewsCard />
+            <NewsCard />
+          </div>
         </div>
       </section>
     </div>
