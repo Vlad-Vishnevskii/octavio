@@ -1,4 +1,4 @@
-.header {
+.wrapper {
   position: relative;
   background: #000103;
   color: #ffffff;
@@ -8,72 +8,89 @@
   box-sizing: border-box;
   overflow: hidden;
   font-family: var(--font-family);
+}
 
-  * {
-    box-sizing: border-box;
-  }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
 
-  &_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 50px;
-  }
+.nav {
+  display: flex;
+  gap: 50px;
 
-  &_nav {
-    display: flex;
-    gap: 50px;
-
-    a {
-      font-weight: 400;
-      font-size: 20px;
-      color: #ffffff;
-    }
-  }
-
-  &_phone {
-    font-weight: 500;
-    font-size: 25px;
-    color: #ffffff;
-  }
-
-  &_title {
-    font-family: var(--second-family);
-    font-weight: 500;
-    font-size: 80px;
-    line-height: 100%;
-    color: #ffffff;
-
-    span {
-      color: #68e1e4;
-    }
-  }
-
-  &_description {
-    //font-family: var(--font-family);
+  a {
     font-weight: 400;
-    font-size: 25px;
-    line-height: 120%;
-    color: #d6d6d6;
+    font-size: 20px;
+    color: #ffffff;
   }
+}
 
-  &_bottom {
-    margin-top: 250px;
-    min-height: 800px;
-  }
+.phone {
+  font-weight: 500;
+  font-size: 25px;
+  color: #ffffff;
+}
 
-  &_bottomLeft {
-    padding-left: 50px;
-    width: 50%;
-  }
+.title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 100%;
+  color: #ffffff;
 
-  &_productImg {
-    position: absolute;
-    z-index: 1;
-    bottom: -100px;
-    right: -200px;
+  span {
+    color: #68e1e4;
   }
+}
+
+.description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+  color: #d6d6d6;
+}
+
+.bottom {
+  margin-top: 250px;
+  min-height: 800px;
+}
+
+.bottomLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 50px;
+  width: 50%;
+}
+
+.productImg {
+  position: absolute;
+  z-index: 1;
+  bottom: -100px;
+  right: -200px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 80px;
+  border: 1px solid #68e1e4;
+  border-radius: 70px;
+  padding: 25px 40px;
+  width: 306px;
+  height: auto;
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 30px;
+  color: #fff;
 }

@@ -1,0 +1,98 @@
+.wrapper {
+  background: #f5f5f7;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  overflow: hidden;
+}
+
+.calaog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 100%;
+  text-align: center;
+  color: #202020;
+}
+
+.catalogList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1714px;
+}
+
+.cardFull {
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #fff;
+  background: #0e0e0e;
+  margin-top: 90px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.aboutRight {
+  position: relative;
+  padding: 40px 50px;
+}
+
+.aboutTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.aboutDescription {
+  margin-top: 30px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 130%;
+  color: #fff;
+}
+
+.aboutAdvantages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.aboutAdvantagesItem {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  width: 348px;
+  height: auto;
+  padding: 20px;
+}
+
+.aboutDecor {
+  position: absolute;
+  top: -700px;
+  right: 0;
+}

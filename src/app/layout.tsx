@@ -5,12 +5,11 @@ import './globals.scss';
 
 const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
-  weight: ['400', '500', '700'], // Указываем нужные веса
-  variable: '--font-family', // Создаём переменную для CSS
+  weight: ['400', '500', '700'],
+  variable: '--font-family',
   display: 'swap',
 });
 
-// Подключаем Unbounded
 const unbounded = Unbounded({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '500', '700'],
@@ -32,7 +31,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${montserrat.variable} ${unbounded.variable}`}>
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
