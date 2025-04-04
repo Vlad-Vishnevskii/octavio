@@ -4,6 +4,37 @@ import { PenIcon, MusicIcon, CpuIcon, HandsIcon, ArrowRight } from './icons';
 import Link from 'next/link';
 import styles from './main-page.module.scss';
 
+const NEWS_LIST = [
+  {
+    id: 0,
+    title: 'Как мне использовать функцию Tidal Live?',
+    description:
+      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
+    imgSrc: './news/news-1.png',
+  },
+  {
+    id: 1,
+    title: 'Как мне использовать функцию Tidal Live?',
+    description:
+      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
+    imgSrc: './news/news-2.png',
+  },
+  {
+    id: 2,
+    title: 'Как мне использовать функцию Tidal Live?',
+    description:
+      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
+    imgSrc: './news/news-3.png',
+  },
+  {
+    id: 3,
+    title: 'Как мне использовать функцию Tidal Live?',
+    description:
+      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
+    imgSrc: './news/news-4.png',
+  },
+];
+
 export default function Home() {
   return (
     <div className={styles.wrapper}>
@@ -67,10 +98,9 @@ export default function Home() {
         </div>
         <div className={styles.newsWrapper}>
           <div className={styles.newsList}>
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
+            {NEWS_LIST.map(item => (
+              <NewsCard key={item.id} {...item} />
+            ))}
           </div>
         </div>
       </section>
