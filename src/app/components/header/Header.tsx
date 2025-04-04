@@ -1,10 +1,19 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import styles from './header.module.scss';
 import { HEADER_IMG_PATHS } from './Header.constants';
-import { ArrowRight } from '@/app/icons';
+import { ArrowRight, BurgerIcon } from '@/app/icons';
 import Image from 'next/image';
 
 export const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
   return (
     <header className={styles.wrapper}>
       <div className={styles.container}>
@@ -19,11 +28,32 @@ export const Header = () => {
         <a className={styles.phone} href="tel:86734552312">
           {'8 (673) 455 - 23 - 12'}
         </a>
+        <button className={styles.burgerBtn} onClick={toggleMenu}>
+          <BurgerIcon />
+        </button>
       </div>
+
+      {menuOpen && <div className={styles.overlay} onClick={toggleMenu} />}
+
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`}>
+        <Link href="/" onClick={toggleMenu}>
+          Главная
+        </Link>
+        <Link href="/blog" onClick={toggleMenu}>
+          Блог
+        </Link>
+        <Link href="/map" onClick={toggleMenu}>
+          Где купить
+        </Link>
+        <a href="tel:86734552312" onClick={toggleMenu}>
+          8 (673) 455 - 23 - 12
+        </a>
+      </div>
+
       <section className={styles.bottom}>
         <div className={styles.bottomLeft}>
           <h1 className={styles.title}>
-            <span>Octavio</span> – это Hi-Fi компоненты
+            <b>Octavio</b> – это <span>{'Hi\u2011Fi'}</span> компоненты
           </h1>
           <p className={styles.description}>
             Используя сетевую платформу LinkPlay, они поддерживают основные стриминговые платформы,

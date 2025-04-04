@@ -24,6 +24,10 @@
   display: flex;
   gap: 50px;
 
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
   a {
     font-weight: 400;
     font-size: 20px;
@@ -31,10 +35,81 @@
   }
 }
 
+.burgerBtn {
+  display: none;
+
+  svg {
+    fill: #ffffff;
+  }
+
+  @media (max-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 1002;
+  }
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: rgba(25, 25, 25, 0.8);
+  backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 1003;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #68e1e4;
+    }
+  }
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1001;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .phone {
   font-weight: 500;
   font-size: 25px;
   color: #ffffff;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .title {
@@ -44,8 +119,9 @@
   line-height: 100%;
   color: #ffffff;
 
-  span {
+  b {
     color: #68e1e4;
+    font-weight: 500;
   }
 }
 
