@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ArrowRight = ({ width = 31, height = 31, stroke = 'white' }) => (
+export const ArrowRight = ({ width = 31, height = 31, stroke = 'currentColor' }) => (
   <svg width={width} height={height} viewBox="0 0 31 31" fill="none">
     <path
       d="M2 15.5H29.5"

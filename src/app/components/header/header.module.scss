@@ -272,6 +272,11 @@
   font-weight: 500;
   font-size: 30px;
   color: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #68e1e4;
+  }
 
   @media (max-width: 767px) {
     margin-top: 10px;
