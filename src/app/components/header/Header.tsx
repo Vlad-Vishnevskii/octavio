@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import styles from './header.module.scss';
 import { HEADER_IMG_PATHS } from './Header.constants';
-import { ArrowRight, BurgerIcon } from '@/app/icons';
+import { ArrowRight, BurgerIcon, CloseIcon } from '@/app/icons';
 import Image from 'next/image';
 
 export const Header = () => {
@@ -36,6 +36,9 @@ export const Header = () => {
       {menuOpen && <div className={styles.overlay} onClick={toggleMenu} />}
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`}>
+        <button onClick={toggleMenu} className={styles.mobileMenu_closeBtn}>
+          <CloseIcon />
+        </button>
         <Link href="/" onClick={toggleMenu}>
           Главная
         </Link>

@@ -5,3 +5,4 @@ export * from './MusicIcon';
 export * from './CpuIcon';
 export * from './HandsIcon';
 export * from './BurgerIcon';
+export * from './CloseIcon';

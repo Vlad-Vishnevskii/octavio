@@ -97,6 +97,11 @@
     font-weight: 400;
     font-size: 20px;
     color: #686868;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #68e1e4;
+    }
 
     @media (max-width: 767px) {
       font-size: 16px;
@@ -146,6 +151,11 @@
     font-weight: 500;
     font-size: 25px;
     color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #68e1e4;
+    }
 
     @media (max-width: 767px) {
       font-size: 16px;
