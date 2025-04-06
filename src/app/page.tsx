@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.about}>
-        <div>
+        <div className={styles.about_left}>
           <Image src="./main-page/about-bg.png" alt="bg" width={980} height={892} />
         </div>
         <div className={styles.aboutRight}>

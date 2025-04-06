@@ -5,8 +5,19 @@
   color: #ffffff;
   background: #0e0e0e;
   background-image: url('/footer/footer-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 50px;
   padding-bottom: 20px;
+
+  @media (max-width: 1750px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+  }
 }
 
 .container {
@@ -20,11 +31,25 @@
   gap: 30px;
   margin-top: 90px;
 
+  @media (max-width: 1250px) {
+    flex-wrap: wrap;
+    justify-content: initial;
+    margin-top: 40px;
+  }
+
+  @media (max-width: 767px) {
+    gap: 15px;
+  }
+
   p {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
     color: #686868;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -32,6 +57,16 @@
   display: flex;
   gap: 90px;
   justify-content: space-between;
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+    justify-content: initial;
+    gap: 40px;
+  }
+
+  @media (max-width: 767px) {
+    gap: 25px;
+  }
 }
 
 .nav {
@@ -39,12 +74,22 @@
   flex-direction: column;
   gap: 20px;
 
+  @media (max-width: 1250px) {
+    flex-direction: row;
+    justify-content: initial;
+    flex-wrap: wrap;
+  }
+
   &_title {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
     color: #fff;
     margin-bottom: 10px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &_item {
@@ -52,6 +97,10 @@
     font-weight: 400;
     font-size: 20px;
     color: #686868;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -60,11 +109,21 @@
   flex-direction: column;
   gap: 25px;
 
+  @media (max-width: 1250px) {
+    flex-direction: row;
+    justify-content: initial;
+    flex-wrap: wrap;
+  }
+
   p {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
     color: #fff;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -76,10 +135,20 @@
   margin: 0;
   padding: 0;
 
+  @media (max-width: 1250px) {
+    flex-direction: row;
+    justify-content: initial;
+    flex-wrap: wrap;
+  }
+
   &_link {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 25px;
     color: #fff;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }

@@ -1,14 +1,24 @@
 .wrapper {
   background: #f5f5f7;
-  padding-top: 120px;
+  padding-top: 150px;
   padding-bottom: 120px;
   overflow: hidden;
+
+  @media (max-width: 767px) {
+    padding: 40px 0;
+  }
 }
 
 .calaog {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 50px;
+  padding-bottom: 70px;
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
 }
 
 .title {
@@ -18,15 +28,29 @@
   line-height: 100%;
   text-align: center;
   color: #202020;
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
 }
 
 .catalogList {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  margin-top: 40px;
+  margin-top: 30px;
   width: 100%;
   max-width: 1714px;
+
+  @media (max-width: 1250px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 10px;
+  }
 }
 
 .cardFull {
@@ -41,16 +65,52 @@
   background: #0e0e0e;
   margin-top: 90px;
 
+  @media (max-width: 1750px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 40px;
+  }
+
+  &_left {
+    @media (max-width: 1750px) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
   img {
     display: block;
     width: 100%;
     height: auto;
+    max-width: 980px;
+
+    @media (max-width: 1750px) {
+      max-width: 540px;
+    }
   }
 }
 
 .aboutRight {
   position: relative;
-  padding: 40px 50px;
+  padding: 102px 75px;
+
+  @media (max-width: 1750px) {
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+  }
 }
 
 .aboutTitle {
@@ -59,25 +119,48 @@
   font-size: 55px;
   line-height: 100%;
   color: #fff;
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
 }
 
 .aboutDescription {
-  margin-top: 30px;
+  margin-top: 57px;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 25px;
   line-height: 130%;
   color: #fff;
+  padding-right: 50px;
+
+  @media (max-width: 1750px) {
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    padding-right: 0;
+    margin-top: 15px;
+    font-size: 18px;
+  }
 }
 
 .aboutAdvantages {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 42px;
   list-style: none;
   margin: 0;
-  margin-top: 50px;
+  margin-top: 86px;
   padding: 0;
+
+  @media (max-width: 1750px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 20px;
+  }
 }
 
 .aboutAdvantagesItem {
@@ -97,19 +180,38 @@
     line-height: 130%;
     color: #fff;
   }
+
+  @media (max-width: 1023px) {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  @media (max-width: 767px) {
+    max-width: 348px;
+  }
 }
 
 .aboutDecor {
   position: absolute;
   top: -700px;
   right: 0;
+
+  @media (max-width: 1750px) {
+    opacity: 0;
+  }
 }
 
 .news {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 150px;
+  padding-bottom: 30px;
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
 }
 
 .newsWrapper {
@@ -118,7 +220,11 @@
   align-items: center;
   width: 100%;
   background: #ffffff;
-  padding: 70px 0;
+  padding: 95px 50px;
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
 }
 
 .newsTop {
@@ -129,6 +235,14 @@
   max-width: 1714px;
   width: 100%;
   margin-bottom: 50px;
+
+  @media (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
 }
 
 .newsTitle {
@@ -138,6 +252,10 @@
   line-height: 100%;
   text-align: center;
   color: #202020;
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
 }
 
 .newsAll {
@@ -154,8 +272,18 @@
   line-height: 110%;
   color: #808080;
 
+  @media (max-width: 1023px) {
+    position: static;
+    font-size: 18px;
+  }
+
   svg {
     stroke: #808080;
+
+    @media (max-width: 767px) {
+      width: 12px;
+      height: 12px;
+    }
   }
 }
 
@@ -165,4 +293,10 @@
   gap: 40px;
   width: 100%;
   max-width: 1714px;
+
+  @media (max-width: 1850px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

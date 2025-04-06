@@ -15,14 +15,18 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 50px;
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
 }
 
 .nav {
   display: flex;
-  gap: 50px;
+  gap: 178px;
 
   @media (max-width: 1200px) {
     display: none;
@@ -43,6 +47,8 @@
   }
 
   @media (max-width: 1200px) {
+    position: relative;
+    top: -4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +59,11 @@
     background: none;
     cursor: pointer;
     z-index: 1002;
+  }
+
+  @media (max-width: 767px) {
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -119,6 +130,14 @@
   line-height: 100%;
   color: #ffffff;
 
+  @media (max-width: 1350px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 35px;
+  }
+
   b {
     color: #68e1e4;
     font-weight: 500;
@@ -131,26 +150,76 @@
   font-size: 25px;
   line-height: 120%;
   color: #d6d6d6;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 
 .bottom {
-  margin-top: 250px;
-  min-height: 800px;
+  margin-top: 190px;
+  min-height: 729px;
+
+  @media (max-width: 1350px) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 850px) {
+    margin-bottom: 110px;
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 40px;
+    min-height: 600px;
+  }
 }
 
 .bottomLeft {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-left: 50px;
-  width: 50%;
+  gap: 61px;
+  padding-left: 100px;
+  width: 55%;
+
+  @media (max-width: 850px) {
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .productImg {
   position: absolute;
   z-index: 1;
-  bottom: -100px;
-  right: -200px;
+  bottom: -200px;
+  right: -183px;
+
+  @media (max-width: 1750px) {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    right: -150px;
+  }
+
+  @media (max-width: 1350px) {
+    max-width: 600px;
+  }
+
+  @media (max-width: 1023px) {
+    bottom: -60px;
+    right: -60px;
+    max-width: 450px;
+  }
+
+  @media (max-width: 767px) {
+    bottom: -120px;
+    right: -80px;
+  }
 }
 
 .btn {
@@ -158,7 +227,7 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-top: 80px;
+  margin-top: 40px;
   border: 1px solid #68e1e4;
   border-radius: 70px;
   padding: 25px 40px;
@@ -169,4 +238,20 @@
   font-weight: 500;
   font-size: 30px;
   color: #fff;
+
+  @media (max-width: 767px) {
+    margin-top: 10px;
+    padding: 10px 10px;
+    font-size: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  svg {
+    @media (max-width: 767px) {
+      width: 21px;
+      height: 21px;
+    }
+  }
 }
