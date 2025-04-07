@@ -10,7 +10,7 @@
   font-family: var(--font-family);
 
   &_grey {
-    background-color: #d6d6d6;
+    background: #f5f5f7;
     background-image: none;
 
     .nav a,
@@ -20,6 +20,13 @@
 
     .nav a::after {
       background: #000103;
+    }
+
+    .phone {
+      &:hover {
+        color: #000103;
+        opacity: 0.6;
+      }
     }
   }
 }

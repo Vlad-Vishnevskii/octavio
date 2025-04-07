@@ -31,27 +31,34 @@ export const YandexMap = () => {
 
           const placemarks = [
             {
-              coordinates: [55.751574, 37.573856],
-              title: 'Красная площадь',
-              description: 'Красная площадь — центральная площадь Москвы.',
-            },
-            {
-              coordinates: [55.757, 37.617],
-              title: 'Кремль',
-              description: 'Московский Кремль — историческая крепость в центре Москвы.',
-            },
-            {
-              coordinates: [55.74, 37.618],
-              title: 'Третьяковская галерея',
-              description: 'Третьяковская галерея — крупнейшая коллекция русского искусства.',
-            },
-            {
               coordinates: [55.806757, 37.583805],
               title: '<h2 class="mb-1">«Dr.Head»</h2>',
               description: `
                 <div class="maps__hints--body">
                   <h4>Телефон</h4>
                   <p><a href="tel:+74955131043" class="maps__hints--phone">+7 (495) 513-10-43</a></p>
+                  <h4>Сайт</h4>
+                  <p><a href="https://www.doctorhead.ru/" class="maps__hints--site" target="_blank">www.doctorhead.ru</a></p>
+                </div>`,
+            },
+            {
+              coordinates: [55.752017, 37.622271],
+              title: '<h2 class="mb-1">«Dr.Head»</h2>',
+              description: `
+                <div class="maps__hints--body">
+                  <h4>Телефон</h4>
+                  <p><a href="tel:+78005554143" class="maps__hints--phone">8 (800) 555-41-43</a></p>
+                  <h4>Сайт</h4>
+                  <p><a href="https://www.doctorhead.ru/" class="maps__hints--site" target="_blank">www.doctorhead.ru</a></p>
+                </div>`,
+            },
+            {
+              coordinates: [55.67076, 37.480232],
+              title: '<h2 class="mb-1">«Dr.Head»</h2>',
+              description: `
+                <div class="maps__hints--body">
+                  <h4>Телефон</h4>
+                  <p><a href="tel:+78005554143" class="maps__hints--phone">8 (800) 555-41-43</a></p>
                   <h4>Сайт</h4>
                   <p><a href="https://www.doctorhead.ru/" class="maps__hints--site" target="_blank">www.doctorhead.ru</a></p>
                 </div>`,
