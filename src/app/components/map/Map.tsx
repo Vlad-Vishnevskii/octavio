@@ -1,44 +1,91 @@
 'use client';
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { LOCATION } from './variables';
+import { useEffect, useRef } from 'react';
 
-export const MapComponent = () => {
-  const [reactifiedApi, setReactifiedApi] = React.useState<any>(null);
+export const YandexMap = () => {
+  const mapRef = useRef<HTMLDivElement>(null);
 
-  React.useEffect(() => {
-    const loadScript = () => {
-      return new Promise((resolve, reject) => {
-        // Если скрипт уже загружен
-        if (window.ymaps3) return resolve(window.ymaps3);
+  useEffect(() => {
+    const loadMap = () => {
+      if (typeof window !== 'undefined' && window.ymaps) {
+        window.ymaps.ready(() => {
+          // Типизация переменных для карты и маркеров
+          const map = new window.ymaps.Map(mapRef.current as HTMLElement, {
+            center: [55.7, 37.6], // Москва (центр по умолчанию)
+            zoom: 9, // Начальный зум
+            controls: ['fullscreenControl'],
+          });
 
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/@yandex/ymaps3-loader'; // URL скрипта
-        script.type = 'text/javascript';
-        script.onload = () => resolve(window.ymaps3);
-        script.onerror = reject;
-        document.head.appendChild(script);
-      });
+          map.behaviors.disable('scrollZoom');
+          map.controls.add('zoomControl', {
+            float: 'none',
+            position: {
+              right: 10,
+              bottom: 45,
+            },
+          });
+
+          // Массив с координатами, заголовками и описаниями для маркеров
+          const placemarks = [
+            {
+              coordinates: [55.751574, 37.573856],
+              title: 'Красная площадь',
+              description: 'Красная площадь — центральная площадь Москвы.',
+            },
+            {
+              coordinates: [55.757, 37.617],
+              title: 'Кремль',
+              description: 'Московский Кремль — историческая крепость в центре Москвы.',
+            },
+            {
+              coordinates: [55.74, 37.618],
+              title: 'Третьяковская галерея',
+              description: 'Третьяковская галерея — крупнейшая коллекция русского искусства.',
+            },
+            {
+              coordinates: [55.806757, 37.583805],
+              title: '<h2 class="mb-1">«Dr.Head»</h2>',
+              description:
+                '<div class="maps__hints--body"><h4>Телефон</h4><p><a href="tel:+74955131043" class="maps__hints--phone">+7 (495) 513-10-43</a></p><h4>Сайт</h4><p><a href="https://www.doctorhead.ru/" class="maps__hints--site" target="_blank">www.doctorhead.ru</a></p></div>',
+            },
+          ];
+
+          // Добавление маркеров на карту
+          placemarks.forEach(placemark => {
+            const { coordinates, title, description } = placemark;
+
+            const marker = new window.ymaps.Placemark(
+              coordinates,
+              {
+                balloonContentHeader: title, // Заголовок
+                balloonContentBody: description, // Описание
+              },
+              {
+                preset: 'islands#redDotIcon', // Красный маркер
+              },
+            );
+
+            map.geoObjects.add(marker); // Добавляем маркер на карту
+          });
+        });
+      }
     };
 
-    loadScript().then((ymaps3: any) => {
-      Promise.all([ymaps3.import('@yandex/ymaps3-reactify'), ymaps3.ready]).then(
-        ([{ reactify }]) => {
-          const api = reactify.bindTo(React, ReactDOM).module(ymaps3);
-          setReactifiedApi(api);
-        },
-      );
-    });
+    // Проверка на уже загруженный скрипт
+    if (window.ymaps) {
+      loadMap();
+    } else {
+      const interval = setInterval(() => {
+        if (window.ymaps) {
+          clearInterval(interval);
+          loadMap();
+        }
+      }, 300);
+    }
   }, []);
 
-  if (!reactifiedApi) return null;
-
-  const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = reactifiedApi;
-
   return (
-    <YMap location={LOCATION}>
-      <YMapDefaultSchemeLayer />
-      <YMapDefaultFeaturesLayer />
-    </YMap>
+    <div>
+      <div ref={mapRef} style={{ width: '100%', height: '800px' }} />
+    </div>
   );
 };
