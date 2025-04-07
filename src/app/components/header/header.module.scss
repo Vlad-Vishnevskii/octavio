@@ -54,6 +54,10 @@
   display: flex;
   gap: 178px;
 
+  @media (max-width: 1750px) {
+    gap: 70px;
+  }
+
   @media (max-width: 1200px) {
     display: none;
   }
@@ -89,6 +93,12 @@
 
   svg {
     fill: #ffffff;
+  }
+
+  &_black {
+    svg {
+      fill: #000103;
+    }
   }
 
   @media (max-width: 1200px) {

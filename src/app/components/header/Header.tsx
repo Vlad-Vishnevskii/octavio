@@ -33,7 +33,10 @@ export const Header = () => {
           <a className={styles.phone} href="tel:86734552312">
             {'8 (673) 455 - 23 - 12'}
           </a>
-          <button className={styles.burgerBtn} onClick={toggleMenu}>
+          <button
+            className={classNames(styles.burgerBtn, styles.burgerBtn_black)}
+            onClick={toggleMenu}
+          >
             <BurgerIcon />
           </button>
         </div>
