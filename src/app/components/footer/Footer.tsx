@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.top}>
-          <Image src="./octavio-logo-white.webp" width={200} height={57} alt="OCTAVIO" />
+          <Image src="/octavio-logo-white.webp" width={200} height={57} alt="OCTAVIO" />
 
           <nav className={styles.nav}>
             <p className={styles.nav_title}>Инфо</p>

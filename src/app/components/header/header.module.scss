@@ -8,6 +8,32 @@
   box-sizing: border-box;
   overflow: hidden;
   font-family: var(--font-family);
+
+  &_grey {
+    background-color: #d6d6d6;
+    background-image: none;
+
+    .nav a,
+    .phone {
+      color: #000103;
+    }
+
+    .nav a::after {
+      background: #000103;
+    }
+  }
+}
+
+.wrapperGrey {
+  position: relative;
+  background: #000103;
+  color: #ffffff;
+  background-image: url('/header/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: var(--font-family);
 }
 
 .container {
