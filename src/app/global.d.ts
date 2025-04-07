@@ -1,9 +1,8 @@
-// global.d.ts
-/// <reference types="window" />
+/// <reference types="@types/yandex-maps" />
 
 declare global {
   interface Window {
-    ymaps: typeof import('ymaps'); // Яндекс.Карты API
+    ymaps: typeof ymaps;
   }
 }
 

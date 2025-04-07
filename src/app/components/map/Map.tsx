@@ -3,28 +3,32 @@ import { useEffect, useRef } from 'react';
 
 export const YandexMap = () => {
   const mapRef = useRef<HTMLDivElement>(null);
+  const mapInstance = useRef<ymaps.Map | null>(null);
 
   useEffect(() => {
     const loadMap = () => {
-      if (typeof window !== 'undefined' && window.ymaps) {
+      if (typeof window !== 'undefined' && window.ymaps && mapRef.current) {
         window.ymaps.ready(() => {
-          // Типизация переменных для карты и маркеров
-          const map = new window.ymaps.Map(mapRef.current as HTMLElement, {
-            center: [55.7, 37.6], // Москва (центр по умолчанию)
-            zoom: 9, // Начальный зум
-            controls: ['fullscreenControl'],
-          });
+          if (mapRef.current?.firstChild) {
+            mapRef.current.innerHTML = '';
+          }
 
-          map.behaviors.disable('scrollZoom');
-          map.controls.add('zoomControl', {
-            float: 'none',
-            position: {
-              right: 10,
-              bottom: 45,
-            },
-          });
+          if (mapRef.current) {
+            mapInstance.current = new window.ymaps.Map(mapRef.current, {
+              center: [55.7, 37.6],
+              zoom: 9,
+              controls: ['fullscreenControl'],
+            });
+          }
 
-          // Массив с координатами, заголовками и описаниями для маркеров
+          if (mapInstance.current) {
+            mapInstance.current.behaviors.disable('scrollZoom');
+            mapInstance.current.controls.add('zoomControl', {
+              float: 'none',
+              position: { right: 10, bottom: 45 },
+            });
+          }
+
           const placemarks = [
             {
               coordinates: [55.751574, 37.573856],
@@ -44,33 +48,33 @@ export const YandexMap = () => {
             {
               coordinates: [55.806757, 37.583805],
               title: '<h2 class="mb-1">«Dr.Head»</h2>',
-              description:
-                '<div class="maps__hints--body"><h4>Телефон</h4><p><a href="tel:+74955131043" class="maps__hints--phone">+7 (495) 513-10-43</a></p><h4>Сайт</h4><p><a href="https://www.doctorhead.ru/" class="maps__hints--site" target="_blank">www.doctorhead.ru</a></p></div>',
+              description: `
+                <div class="maps__hints--body">
+                  <h4>Телефон</h4>
+                  <p><a href="tel:+74955131043" class="maps__hints--phone">+7 (495) 513-10-43</a></p>
+                  <h4>Сайт</h4>
+                  <p><a href="https://www.doctorhead.ru/" class="maps__hints--site" target="_blank">www.doctorhead.ru</a></p>
+                </div>`,
             },
           ];
 
-          // Добавление маркеров на карту
-          placemarks.forEach(placemark => {
-            const { coordinates, title, description } = placemark;
-
+          placemarks.forEach(({ coordinates, title, description }) => {
             const marker = new window.ymaps.Placemark(
               coordinates,
               {
-                balloonContentHeader: title, // Заголовок
-                balloonContentBody: description, // Описание
+                balloonContentHeader: title,
+                balloonContentBody: description,
               },
               {
-                preset: 'islands#redDotIcon', // Красный маркер
+                preset: 'islands#redDotIcon',
               },
             );
-
-            map.geoObjects.add(marker); // Добавляем маркер на карту
+            if (mapInstance.current) mapInstance.current.geoObjects.add(marker);
           });
         });
       }
     };
 
-    // Проверка на уже загруженный скрипт
     if (window.ymaps) {
       loadMap();
     } else {
@@ -81,6 +85,13 @@ export const YandexMap = () => {
         }
       }, 300);
     }
+
+    return () => {
+      if (mapInstance.current) {
+        mapInstance.current.destroy();
+        mapInstance.current = null;
+      }
+    };
   }, []);
 
   return (
