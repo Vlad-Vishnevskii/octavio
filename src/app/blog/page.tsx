@@ -1,11 +1,26 @@
+import styles from './blog-page.module.scss';
+import { NewsCard, CatalogCard } from '../components';
+import { NEWS_ARR, PRODUCTS_LIST } from './constants';
 
 const Blog = () => {
-    return (
-      <div>
-        <h1>Blog Page</h1>
-        <p>This is the About page!</p>
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>БЛОГ</h1>
+      <div className={styles.newsList}>
+        {NEWS_ARR.map(item => (
+          <NewsCard key={item.id} {...item} />
+        ))}
       </div>
-    );
-  };
-  
-  export default Blog;
+      <section className={styles.productsWrapper}>
+        <h2 className={styles.subTitle}>НАШИ ТОВАРЫ</h2>
+        <div className={styles.productsList}>
+          {PRODUCTS_LIST.map(item => (
+            <CatalogCard className={styles.productsList_item} smallArrow key={item.id} {...item} />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Blog;

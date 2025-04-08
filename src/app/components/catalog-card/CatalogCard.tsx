@@ -7,12 +7,17 @@ type Props = {
   className?: string;
   name: string;
   imgSrc: string;
+  smallArrow?: boolean;
 };
 
-export const CatalogCard: React.FC<Props> = ({ className, name, imgSrc }) => {
+export const CatalogCard: React.FC<Props> = ({ className, name, imgSrc, smallArrow = false }) => {
   return (
     <div className={classNames(styles.wrapper, className)}>
-      <div className={styles.linkIcon}>
+      <div
+        className={classNames(styles.linkIcon, {
+          [styles.linkIcon_small]: smallArrow,
+        })}
+      >
         <ArrowTopRight />
       </div>
       <Image className={styles.img} src={imgSrc} alt={name} width={630} height={630} />
