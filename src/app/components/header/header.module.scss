@@ -202,7 +202,7 @@
 .title {
   font-family: var(--second-family);
   font-weight: 500;
-  font-size: 80px;
+  font-size: 70px;
   line-height: 100%;
   color: #ffffff;
 
@@ -235,6 +235,7 @@
 .bottom {
   margin-top: 190px;
   min-height: 729px;
+  padding-bottom: 15%;
 
   @media (max-width: 1350px) {
     margin-top: 80px;
@@ -242,11 +243,17 @@
 
   @media (max-width: 850px) {
     margin-bottom: 110px;
+    padding-bottom: 25%;
   }
 
   @media (max-width: 767px) {
     margin-top: 40px;
+    padding-bottom: 53%;
     min-height: 550px;
+  }
+
+  @media (max-width: 400px) {
+    padding-bottom: 40%;
   }
 }
 

@@ -6,6 +6,7 @@
 
   @media (max-width: 767px) {
     padding: 40px 0;
+    padding-bottom: 60px;
   }
 }
 
@@ -173,12 +174,21 @@
   height: auto;
   padding: 20px;
 
+  @media (max-width: 767px) {
+    align-items: center;
+  }
+
   span {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
     line-height: 130%;
     color: #fff;
+
+    @media (max-width: 767px) {
+      text-align: center;
+      font-size: 16px;
+    }
   }
 
   @media (max-width: 1023px) {
@@ -210,7 +220,7 @@
 
   @media (max-width: 767px) {
     padding-top: 30px;
-    padding-bottom: 0;
+    padding-bottom: 30px;
   }
 }
 
@@ -223,7 +233,7 @@
   padding: 95px 50px;
 
   @media (max-width: 767px) {
-    padding: 0 20px;
+    padding: 40px 20px;
   }
 }
 

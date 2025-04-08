@@ -25,7 +25,7 @@ export const Footer = () => {
           <div className={styles.info}>
             <p>Официальный дистрибьютер</p>
             <p>ООО ТК “Технологика”</p>
-            <p>it-sound.ru</p>
+            <a href="https://tl-sound.ru/">tl-sound.ru</a>
           </div>
           <ul className={styles.contacts}>
             <li className={styles.contacts_item}>

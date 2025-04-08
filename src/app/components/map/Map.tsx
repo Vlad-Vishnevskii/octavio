@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import { placemarks } from './Map.constants';
+import styles from './map.module.scss';
 
 export const YandexMap = () => {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -17,7 +18,7 @@ export const YandexMap = () => {
           if (mapRef.current) {
             mapInstance.current = new window.ymaps.Map(mapRef.current, {
               center: [55.7, 37.6],
-              zoom: 9,
+              zoom: 10,
               controls: ['fullscreenControl'],
             });
           }
@@ -68,7 +69,7 @@ export const YandexMap = () => {
 
   return (
     <div>
-      <div ref={mapRef} style={{ width: '100%', height: '800px' }} />
+      <div ref={mapRef} className={styles.container} />
     </div>
   );
 };

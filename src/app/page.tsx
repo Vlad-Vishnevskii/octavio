@@ -63,27 +63,42 @@ export default function Home() {
             height={641}
             alt="ellipce"
           />
-          <h3 className={styles.aboutTitle}>О НАС</h3>
+          <h3 className={styles.aboutTitle}>О нас</h3>
           <p className={styles.aboutDescription}>
-            Бренд Octavio был создан молодыми музыкантами и энтузиастами Hi-Fi, которые хотели
-            соединить современный образ жизни и наслаждение от качественного звучания.{' '}
+            Мы соединили уважение к традициям звуковоспроизведения с инновационными технологиями,
+            чтобы вы могли услышать каждую ноту так, как она была задумана. В сердце акустических
+            систем Octavio знаменитые динамики Davis Acoustics, что делает их звучание по-настоящему
+            безупречным
           </p>
           <ul className={styles.aboutAdvantages}>
             <li className={styles.aboutAdvantagesItem}>
               <PenIcon />
-              <span>Разработано и собрано во Франции</span>
+              <span>
+                <b>Система Harmony:</b> анализирует и преобразует аудиосигнал любого контента
+                (музыки, фильмов, подкастов, видеоигр и т. д.) для иммерсивного пространственного
+                воспроизведения
+              </span>
             </li>
             <li className={styles.aboutAdvantagesItem}>
               <MusicIcon />
-              <span>Гармония технологичности и музыкальности</span>
+              <span>
+                <b>Link Play:</b> Поддержка Spotify, Apple Music, Deezer, Qobuz, Tidal и др. —
+                наслаждайтесь музыкой без ограничений
+              </span>
             </li>
             <li className={styles.aboutAdvantagesItem}>
               <CpuIcon />
-              <span>Чтим наследие и создаём инновации</span>
+              <span>
+                <b>Поддержка мультирум:</b> Hi-Fi звучание и беспрерывная трансляция контента в
+                любой точке вашего дома
+              </span>
             </li>
             <li className={styles.aboutAdvantagesItem}>
               <HandsIcon />
-              <span>Сотрудничество с ведущими Hi-Fi брендами</span>
+              <span>
+                <b>Совместимость с системой умного дома:</b> голосовое управление и множество других
+                функций, делающих вашу жизнь проще
+              </span>
             </li>
           </ul>
         </div>

@@ -42,8 +42,8 @@ export const Header = () => {
             <Link href="/blog">Блог</Link>
             <Link href="/map">Где купить</Link>
           </nav>
-          <a className={styles.phone} href="tel:86734552312">
-            {'8 (673) 455 - 23 - 12'}
+          <a className={styles.phone} href="tel:88007003334">
+            {'8 (800) 700-33-34'}
           </a>
           <button
             className={classNames(styles.burgerBtn, styles.burgerBtn_black)}
@@ -68,8 +68,8 @@ export const Header = () => {
           <Link href="/map" onClick={toggleMenu}>
             Где купить
           </Link>
-          <a href="tel:86734552312" onClick={toggleMenu}>
-            8 (673) 455 - 23 - 12
+          <a href="tel:88007003334" onClick={toggleMenu}>
+            {'8 (800) 700-33-34'}
           </a>
         </div>
       </header>
@@ -87,8 +87,8 @@ export const Header = () => {
           <Link href="/blog">Блог</Link>
           <Link href="/map">Где купить</Link>
         </nav>
-        <a className={styles.phone} href="tel:86734552312">
-          {'8 (673) 455 - 23 - 12'}
+        <a className={styles.phone} href="tel:88007003334">
+          {'8 (800) 700-33-34'}
         </a>
         <button className={styles.burgerBtn} onClick={toggleMenu}>
           <BurgerIcon />
@@ -110,19 +110,20 @@ export const Header = () => {
         <Link href="/map" onClick={toggleMenu}>
           Где купить
         </Link>
-        <a href="tel:86734552312" onClick={toggleMenu}>
-          8 (673) 455 - 23 - 12
+        <a href="tel:88007003334" onClick={toggleMenu}>
+          {'8 (800) 700-33-34'}
         </a>
       </div>
 
       <section className={styles.bottom}>
         <div className={styles.bottomLeft}>
           <h1 className={styles.title}>
-            <b>Octavio</b> – это <span>{'Hi\u2011Fi'}</span> компоненты
+            <b>Octavio</b> – это <span>{'Hi\u2011Fi'}</span> компоненты для современной жизни.
           </h1>
           <p className={styles.description}>
-            Используя сетевую платформу LinkPlay, они поддерживают основные стриминговые платформы,
-            мультирум и могут встраиваться в систему умного дома
+            Бескомпромиссное звучание не требует сложной установки, специальных знаний и грандиозных
+            вложений. Наслаждайтесь контентом со всех стриминговых платформ или подарите вторую
+            жизнь своей музыкальной коллекции. Hi-Fi c Octavio — это просто!
           </p>
           <Link className={styles.btn} href="/">
             К товарам
