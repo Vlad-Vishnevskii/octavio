@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './header.module.scss';
 import { HEADER_IMG_PATHS } from './Header.constants';
@@ -17,6 +17,18 @@ export const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(prev => !prev);
   };
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
 
   if (!isHome) {
     return (
