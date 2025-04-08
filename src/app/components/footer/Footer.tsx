@@ -13,10 +13,14 @@ export const Footer = () => {
 
   const openModal = () => {
     setModalIsOpen(true);
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setModalIsOpen(false);
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   };
 
   return (
@@ -58,7 +62,7 @@ export const Footer = () => {
         </div>
         <div className={styles.bottom}>
           <p>©Octavio 2025</p>
-          <p onClick={openModal}>Политика конфиденциальности</p>
+          <button onClick={openModal}>Политика конфиденциальности</button>
           <p>Design: Denis Vaschenko</p>
         </div>
       </div>

@@ -41,7 +41,10 @@
     gap: 15px;
   }
 
-  p {
+  p,
+  button {
+    background: none;
+    border: none;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
@@ -49,6 +52,14 @@
 
     @media (max-width: 767px) {
       font-size: 16px;
+    }
+  }
+  button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #68e1e4;
     }
   }
 }
@@ -199,6 +210,10 @@
 
   p {
     margin-bottom: 1rem;
+  }
+
+  ul {
+    padding-left: 30px;
   }
 
   li {
