@@ -1,8 +1,24 @@
-import styles from './footer.module.scss';
+'use client';
+
+import { useState } from 'react';
+import Modal from 'react-modal';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PolicyText } from '../policy-content';
+
+import styles from './footer.module.scss';
 
 export const Footer = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <footer className={styles.wrapper}>
       <div className={styles.container}>
@@ -42,10 +58,22 @@ export const Footer = () => {
         </div>
         <div className={styles.bottom}>
           <p>©Octavio 2025</p>
-          <p>Политика конфиденциальности</p>
+          <p onClick={openModal}>Политика конфиденциальности</p>
           <p>Design: Denis Vaschenko</p>
         </div>
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        ariaHideApp={false}
+        className={styles.modalContent}
+        overlayClassName={styles.modalOverlay}
+      >
+        <button className={styles.closeBtn} onClick={closeModal}>
+          &times;
+        </button>
+        <PolicyText />
+      </Modal>
     </footer>
   );
 };
