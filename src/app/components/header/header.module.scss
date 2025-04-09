@@ -319,10 +319,12 @@
   height: auto;
   text-decoration: none;
   font-family: var(--font-family);
+  background: transparent;
   font-weight: 500;
   font-size: 30px;
   color: #fff;
   transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     color: #68e1e4;

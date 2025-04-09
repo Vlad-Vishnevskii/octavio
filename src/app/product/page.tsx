@@ -1,10 +1,10 @@
+import { Suspense } from 'react';
+import ProductPageClient from './product-client';
 
-const Product = () => {
-    return (
-      <div>
-        <h1>Product Page</h1>
-      </div>
-    );
-  };
-  
-  export default Product;
+export default function ProductPage() {
+  return (
+    <Suspense fallback={<p>Загрузка...</p>}>
+      <ProductPageClient />
+    </Suspense>
+  );
+}

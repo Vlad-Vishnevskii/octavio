@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect } from 'react';
 import Image from 'next/image';
 import { CatalogCard, NewsCard } from './components';
 import { PenIcon, MusicIcon, CpuIcon, HandsIcon, ArrowRight } from './icons';
@@ -10,54 +13,57 @@ const NEWS_LIST = [
     title: 'Как мне использовать функцию Tidal Live?',
     description:
       'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: './news/news-1.png',
+    imgSrc: '/news/news-1.png',
   },
   {
     id: 1,
     title: 'Как мне использовать функцию Tidal Live?',
     description:
       'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: './news/news-2.png',
+    imgSrc: '/news/news-2.png',
   },
   {
     id: 2,
     title: 'Как мне использовать функцию Tidal Live?',
     description:
       'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: './news/news-3.png',
+    imgSrc: '/news/news-3.png',
   },
   {
     id: 3,
     title: 'Как мне использовать функцию Tidal Live?',
     description:
       'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: './news/news-4.png',
+    imgSrc: '/news/news-4.png',
   },
 ];
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   return (
     <div className={styles.wrapper}>
-      <section className={styles.calaog}>
+      <section className={styles.calaog} id="products">
         <h2 className={styles.title}>КАТАЛОГ ТОВАРОВ</h2>
         <div className={styles.catalogList}>
           <div className={styles.cardFull}></div>
           <CatalogCard
             name="Octavio Maestro"
-            imgSrc="./Maestro-Light/2.png"
+            imgSrc="/Maestro-Light/2.png"
             className={styles.cardFull}
           />
-          <CatalogCard name="Octavio Amp" imgSrc="./Amp/8.png" />
-          <CatalogCard name="Octavio StreamG2" imgSrc="./Stream/1.png" />
+          <CatalogCard name="Octavio Amp" imgSrc="/Amp/8.png" />
+          <CatalogCard name="Octavio StreamG2" imgSrc="/Stream/1.png" />
         </div>
       </section>
       <section className={styles.about}>
         <div className={styles.about_left}>
-          <Image src="./main-page/about-bg.png" alt="bg" width={980} height={892} />
+          <Image src="/main-page/about-bg.png" alt="bg" width={980} height={892} />
         </div>
         <div className={styles.aboutRight}>
           <Image
-            src="./main-page/about-ellipse.png"
+            src="/main-page/about-ellipse.png"
             className={styles.aboutDecor}
             width={641}
             height={641}

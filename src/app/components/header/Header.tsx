@@ -18,6 +18,13 @@ export const Header = () => {
     setMenuOpen(prev => !prev);
   };
 
+  const scrollToProducts = () => {
+    const element = document.getElementById('products');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
@@ -128,10 +135,10 @@ export const Header = () => {
             вложений. Наслаждайтесь контентом со всех стриминговых платформ или подарите вторую
             жизнь своей музыкальной коллекции. Hi-Fi c Octavio — это просто!
           </p>
-          <Link className={styles.btn} href="/">
+          <button onClick={scrollToProducts} className={styles.btn}>
             К товарам
             <ArrowRight />
-          </Link>
+          </button>
         </div>
         <Image
           className={styles.productImg}
