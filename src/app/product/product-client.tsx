@@ -26,7 +26,7 @@ const ProductClient = () => {
   const [product, setProduct] = useState<ProductPageType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState(2);
+  const [activeTab, setActiveTab] = useState(1);
 
   const description = product?.description.map((item, index) => (
     <p className={styles.frame_descriptionItem} key={index}>
