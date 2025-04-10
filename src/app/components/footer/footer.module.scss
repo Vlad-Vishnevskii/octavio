@@ -210,7 +210,7 @@
   position: relative;
   outline: none;
   color: #ffffff;
-  scrollbar-width: auto; /* стили скролла для мозилы */
+  scrollbar-width: 0; /* стили скролла для мозилы */
   transform: translateY(0);
   transition: transform 0.3s ease;
 
