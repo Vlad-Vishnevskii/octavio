@@ -9,8 +9,17 @@ import { ProductPageType } from './types';
 import { Loader } from '../components';
 import classNames from 'classnames';
 import { ProductCharacteristics } from './characteristics.component';
+import { ProductCard } from '../components';
 
 import styles from './product-page.module.scss';
+
+const sampleProduct = {
+  title: 'Умная колонка',
+  description: 'Эта умная колонка обладает отличным звуком и функциями управления.',
+  images: ['/Maestro-Light/1.png', '/Maestro-Light/2.png', '/Maestro-Light/3.png'],
+  previewImages: ['/Maestro-Light/1.png', '/Maestro-Light/2.png', '/Maestro-Light/3.png'],
+  colors: ['#FF0000', '#00FF00', '#0000FF'],
+};
 
 const ProductClient = () => {
   const searchParams = useSearchParams();
@@ -50,7 +59,15 @@ const ProductClient = () => {
   return (
     <div className={styles.container}>
       <div className={styles.frame}>
-        <div className={styles.frame_left}></div>
+        <div className={styles.frame_left}>
+          <ProductCard
+            title={sampleProduct.title}
+            description={sampleProduct.description}
+            images={sampleProduct.images}
+            previewImages={sampleProduct.previewImages}
+            colors={sampleProduct.colors}
+          />
+        </div>
         <div className={styles.frame_right}>
           <h1 className={styles.frame_title}>{product?.title}</h1>
           <p className={styles.frame_slogan}>{product?.slogan}</p>
