@@ -12,19 +12,12 @@ import './product-card.scss';
 import classNames from 'classnames';
 
 interface ProductCardProps {
-  title: string;
-  description: string;
+  currentColor?: string;
   images: string[];
-  previewImages: string[];
-  colors: string[];
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({
-  title,
-  description,
   images,
-  previewImages,
-  colors,
 }) => {
   const swiperEl = useSwiper();
   const [swiper, setSwiper] = useState(swiperEl);

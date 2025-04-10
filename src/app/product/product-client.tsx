@@ -13,20 +13,13 @@ import { ProductCard } from '../components';
 
 import styles from './product-page.module.scss';
 
-const sampleProduct = {
-  title: 'Умная колонка',
-  description: 'Эта умная колонка обладает отличным звуком и функциями управления.',
-  images: ['/Maestro-Light/1.png', '/Maestro-Light/2.png', '/Maestro-Light/3.png'],
-  previewImages: ['/Maestro-Light/1.png', '/Maestro-Light/2.png', '/Maestro-Light/3.png'],
-  colors: ['#FF0000', '#00FF00', '#0000FF'],
-};
-
 const ProductClient = () => {
   const searchParams = useSearchParams();
   const [product, setProduct] = useState<ProductPageType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
   const [activeTab, setActiveTab] = useState(1);
+  const [currentColor, setCurrentColor] = useState('')
 
   const description = product?.description.map((item, index) => (
     <p className={styles.frame_descriptionItem} key={index}>
@@ -61,16 +54,18 @@ const ProductClient = () => {
       <div className={styles.frame}>
         <div className={styles.frame_left}>
           <ProductCard
-            title={sampleProduct.title}
-            description={sampleProduct.description}
-            images={sampleProduct.images}
-            previewImages={sampleProduct.previewImages}
-            colors={sampleProduct.colors}
+            images={product?.images ?? []}
+            currentColor={currentColor}
           />
         </div>
         <div className={styles.frame_right}>
           <h1 className={styles.frame_title}>{product?.title}</h1>
           <p className={styles.frame_slogan}>{product?.slogan}</p>
+          {product?.colors?.length && <div>
+            <button>белый</button>
+            <button>черный</button>
+          </div>
+          }
           <div className={styles.tabs}>
             <button
               className={classNames(styles.tabs_item, {

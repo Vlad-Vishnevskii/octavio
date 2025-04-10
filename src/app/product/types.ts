@@ -13,6 +13,11 @@ export interface ProductPageType {
   description: string[];
   characteristics: CharacteristicsItem[];
   otherProducts: OtherProductsType[];
+  images: string[];
+}
+
+export interface MultiColorImage {
+  // : string[]
 }
 
 export type CharacteristicsItem = CharacteristicsItemList | CharacteristicsItemString;
