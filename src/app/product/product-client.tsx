@@ -19,7 +19,8 @@ const ProductClient = () => {
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
   const [activeTab, setActiveTab] = useState(1);
-  const [currentColor, setCurrentColor] = useState('')
+  const [currentColor, setCurrentColor] = useState('');
+  const isColorTabsVisible = product?.images?.length && product?.images?.length > 1;
 
   const description = product?.description.map((item, index) => (
     <p className={styles.frame_descriptionItem} key={index}>
@@ -42,6 +43,7 @@ const ProductClient = () => {
     } else {
       setIsLoading(false);
       setProduct(currentProduct);
+      setCurrentColor(currentProduct.images[0].color);
     }
   }, [searchParams, router]);
 
@@ -53,19 +55,25 @@ const ProductClient = () => {
     <div className={styles.container}>
       <div className={styles.frame}>
         <div className={styles.frame_left}>
-          <ProductCard
-            images={product?.images ?? []}
-            currentColor={currentColor}
-          />
+          <ProductCard images={product?.images ?? []} currentColor={currentColor} />
         </div>
         <div className={styles.frame_right}>
           <h1 className={styles.frame_title}>{product?.title}</h1>
           <p className={styles.frame_slogan}>{product?.slogan}</p>
-          {product?.colors?.length && <div>
-            <button>белый</button>
-            <button>черный</button>
-          </div>
-          }
+          {isColorTabsVisible && (
+            <div className={styles.frame_colorTabs}>
+              {product?.images.map((item, index) => (
+                <button
+                  className={classNames(styles.frame_colorItem, {
+                    [styles.frame_colorItem_white]: item.color === 'white',
+                    [styles.frame_colorItem_active]: item.color === currentColor,
+                  })}
+                  onClick={() => setCurrentColor(item.color)}
+                  key={index}
+                />
+              ))}
+            </div>
+          )}
           <div className={styles.tabs}>
             <button
               className={classNames(styles.tabs_item, {

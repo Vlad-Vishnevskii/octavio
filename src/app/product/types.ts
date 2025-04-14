@@ -13,11 +13,12 @@ export interface ProductPageType {
   description: string[];
   characteristics: CharacteristicsItem[];
   otherProducts: OtherProductsType[];
-  images: string[];
+  images: ImageItem[];
 }
 
-export interface MultiColorImage {
-  // : string[]
+export interface ImageItem {
+  color: string;
+  srcList: string[];
 }
 
 export type CharacteristicsItem = CharacteristicsItemList | CharacteristicsItemString;
@@ -30,4 +31,9 @@ export interface CharacteristicsItemList {
 export interface CharacteristicsItemString {
   label: string;
   value: string;
+}
+
+export enum ColorsTypes {
+  white = 'white',
+  black = 'black',
 }

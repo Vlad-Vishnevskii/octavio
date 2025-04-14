@@ -27,6 +27,31 @@
     color: #202020;
   }
 
+  &_colorTabs {
+    display: flex;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  &_colorItem {
+    display: flex;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background: #000000;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &_white {
+      background: #e8d0b7;
+    }
+
+    &_active {
+      border-color: #e1e1e3;
+    }
+  }
+
   &_slogan {
     margin-top: 30px;
     font-family: var(--font-family);
