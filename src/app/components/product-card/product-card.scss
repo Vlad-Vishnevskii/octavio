@@ -94,6 +94,22 @@
     padding-bottom: 40px;
   }
 
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 80%;
+      height: auto;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
+    }
+  }
+
   .swiper-pagination {
     bottom: 0px;
   }
@@ -167,6 +183,10 @@
   gap: 25px;
   padding: 0;
   margin: 0;
+
+  @media (max-width: 767px) {
+    gap: 10px;
+  }
 }
 
 .preview-item {

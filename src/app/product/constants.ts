@@ -94,14 +94,15 @@ export const PRODUCTS_PAGE_LIST = [
     title: 'Octavio Amp',
     slogan: 'Octavio Amp – это мост между аналоговым и цифровым миром.',
     description: [
-      'Maestro был разработан, чтобы объединить в компактном формате все, что составляет качественную аудиосистему: Hi-Fi колонки, встроенное двухканальное усиление и технологии стриминга.',
-      'Он наполнит вашу комнату музыкой как в одиночной конфигурации, так и в стереопаре. Точные высокие частоты, естественный вокал и контролируемый бас — все это в устройстве, которое так же просто в подключении, как и обычная колонка.',
-      'Octavio Maestro объединяет 40 лет опыта в мире high fidelity звука благодаря своим динамикам, разработанным в сотрудничестве с Davis Acoustics. Эта акустическая система поддерживает мультирум и может встраиваться в систему умного дома — все для удобной и современной жизни!',
+      'Элегантный и компактный усилитель с поддержкой Wi-Fi стриминга позволит вам в мгновение ока услышать свои любимые плейлисты из Spotify / Apple Music / Deezer / Tidal / Qobuz  в Hi-Fi качестве. Никаких сложных настроек и паутины из проводов. ',
+      'Компактный, мощный, универсальный, Octavio Amp создан, чтобы раскрыть весь потенциал вашей акустики и вдохнуть новую жизнь в вашу музыкальную коллекцию, будь то винил, CD или другие источники. ',
+      'Ради качественного звука не нужно жертвовать пространством: Octavio Amp легко найдет свое место на полке, став сердцем вашей домашней развлекательной системы.',
+      'Как и все продукты Octavio, усилитель Amp собирается во Франции и разработан из прочных, разборных и ремонтопригодных материалов, чтобы вы могли наслаждаться своей покупкой долгие годы.',
     ],
     images: [
       {
         color: ColorsTypes.black,
-        srcList: ['/Maestro-Black/4.png', '/Maestro-Black/5.png', '/Maestro-Black/6.png'],
+        srcList: ['/Amp/8.png', '/Amp/7.png', '/Amp/9.png'],
       },
     ],
     characteristics: [
@@ -149,13 +150,13 @@ export const PRODUCTS_PAGE_LIST = [
       {
         id: 0,
         link: '/product?id=maestro',
-        name: 'Octavio Amp',
-        imgSrc: '/Amp/8.png',
+        name: 'Octavio Maestro',
+        imgSrc: '/Maestro-Light/2.png',
       },
       {
         id: 1,
         link: '/product?id=streamg2',
-        name: 'Octavio Amp',
+        name: 'Octavio StreamG2',
         imgSrc: '/Stream/1.png',
       },
     ],
@@ -172,7 +173,7 @@ export const PRODUCTS_PAGE_LIST = [
     images: [
       {
         color: ColorsTypes.black,
-        srcList: ['/Maestro-Black/4.png', '/Maestro-Black/5.png', '/Maestro-Black/6.png'],
+        srcList: ['/Stream/1.png', '/Stream/2.png'],
       },
     ],
     characteristics: [
@@ -219,14 +220,14 @@ export const PRODUCTS_PAGE_LIST = [
       {
         id: 0,
         link: '/product?id=maestro',
-        name: 'Octavio Amp',
-        imgSrc: '/Amp/8.png',
+        name: 'Octavio Maestro',
+        imgSrc: '/Maestro-Light/2.png',
       },
       {
         id: 1,
-        link: '/product?id=streamg2',
+        link: '/product?id=amp',
         name: 'Octavio Amp',
-        imgSrc: '/Stream/1.png',
+        imgSrc: '/Amp/8.png',
       },
     ],
   },
