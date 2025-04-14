@@ -35,10 +35,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ images, currentColor }
     } else {
       setCurrentImages(images[0]?.srcList);
     }
-  }, [currentColor]);
+  }, [currentColor, images]);
 
   return (
-    <div>
+    <div className="wrapper">
       <div className="product-card">
         <Swiper
           spaceBetween={10}
