@@ -51,10 +51,11 @@ export default function Home() {
           <CatalogCard
             name="Octavio Maestro"
             imgSrc="/Maestro-Light/2.png"
+            href="/product/?id=maestro"
             className={styles.cardFull}
           />
-          <CatalogCard name="Octavio Amp" imgSrc="/Amp/8.png" />
-          <CatalogCard name="Octavio StreamG2" imgSrc="/Stream/1.png" />
+          <CatalogCard href="/product/?id=amp" name="Octavio Amp" imgSrc="/Amp/8.png" />
+          <CatalogCard href="/product/?id=stream" name="Octavio StreamG2" imgSrc="/Stream/1.png" />
         </div>
       </section>
       <section className={styles.about}>

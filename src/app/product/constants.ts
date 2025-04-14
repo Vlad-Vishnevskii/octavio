@@ -77,13 +77,13 @@ export const PRODUCTS_PAGE_LIST = [
     otherProducts: [
       {
         id: 0,
-        link: '/product?id=amp',
+        href: '/product?id=amp',
         name: 'Octavio Amp',
         imgSrc: '/Amp/8.png',
       },
       {
         id: 1,
-        link: '/product?id=streamg2',
+        href: '/product?id=stream',
         name: 'Octavio StreamG2',
         imgSrc: '/Stream/1.png',
       },
@@ -149,13 +149,13 @@ export const PRODUCTS_PAGE_LIST = [
     otherProducts: [
       {
         id: 0,
-        link: '/product?id=maestro',
+        href: '/product?id=maestro',
         name: 'Octavio Maestro',
         imgSrc: '/Maestro-Light/2.png',
       },
       {
         id: 1,
-        link: '/product?id=streamg2',
+        href: '/product?id=stream',
         name: 'Octavio StreamG2',
         imgSrc: '/Stream/1.png',
       },
@@ -219,13 +219,13 @@ export const PRODUCTS_PAGE_LIST = [
     otherProducts: [
       {
         id: 0,
-        link: '/product?id=maestro',
+        href: '/product?id=maestro',
         name: 'Octavio Maestro',
         imgSrc: '/Maestro-Light/2.png',
       },
       {
         id: 1,
-        link: '/product?id=amp',
+        href: '/product?id=amp',
         name: 'Octavio Amp',
         imgSrc: '/Amp/8.png',
       },
