@@ -1,5 +1,5 @@
 export interface OtherProductsType {
-  link: string;
+  href: string;
   name: string;
   imgSrc: string;
   id: number;
