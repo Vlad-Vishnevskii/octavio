@@ -9,14 +9,19 @@
 .frame {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
   background: #ffffff;
   width: 100%;
   max-width: 1714px;
   border-radius: 50px;
+  padding-bottom: 15px;
 
   &_right {
-    padding: 30px;
+    padding: 50px 80px;
+    padding-left: 0;
+  }
+
+  &_left {
+    padding: 30px 66px;
   }
 
   &_title {
@@ -29,8 +34,8 @@
 
   &_colorTabs {
     display: flex;
-    margin-top: 30px;
-    gap: 15px;
+    margin-top: 35px;
+    gap: 25px;
   }
 
   &_colorItem {
@@ -44,6 +49,8 @@
     transition: all 0.3s ease;
 
     &_white {
+      width: 39px;
+      height: 39px;
       background: #e8d0b7;
     }
 
@@ -53,7 +60,7 @@
   }
 
   &_slogan {
-    margin-top: 30px;
+    margin-top: 45px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
@@ -62,7 +69,7 @@
   }
 
   &_descriptionItem {
-    margin-top: 30px;
+    margin-top: 34px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 20px;
@@ -76,6 +83,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  margin-top: 150px;
 
   &_title {
     font-family: var(--font-family);
@@ -93,14 +101,14 @@
     gap: 30px;
     width: 100%;
     max-width: 1714px;
-    margin-top: 30px;
+    margin-top: 65px;
   }
 }
 
 .tabs {
   display: flex;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 45px;
+  margin-top: 50px;
 
   &_item {
     font-family: var(--font-family);

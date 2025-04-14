@@ -59,7 +59,6 @@ const ProductClient = () => {
         </div>
         <div className={styles.frame_right}>
           <h1 className={styles.frame_title}>{product?.title}</h1>
-          <p className={styles.frame_slogan}>{product?.slogan}</p>
           {isColorTabsVisible && (
             <div className={styles.frame_colorTabs}>
               {product?.images.map((item, index) => (
@@ -74,6 +73,7 @@ const ProductClient = () => {
               ))}
             </div>
           )}
+          <p className={styles.frame_slogan}>{product?.slogan}</p>
           <div className={styles.tabs}>
             <button
               className={classNames(styles.tabs_item, {
