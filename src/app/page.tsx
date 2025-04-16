@@ -3,42 +3,13 @@
 import { useEffect } from 'react';
 import Image from 'next/image';
 import { CatalogCard, NewsCard } from './components';
+import { BLOG_ITEMS } from './blog/constants';
 import { PenIcon, MusicIcon, CpuIcon, HandsIcon, ArrowRight } from './icons';
 import Link from 'next/link';
 import styles from './main-page.module.scss';
 
-const NEWS_LIST = [
-  {
-    id: 0,
-    title: 'Как мне использовать функцию Tidal Live?',
-    description:
-      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: '/news/news-1.png',
-  },
-  {
-    id: 1,
-    title: 'Как мне использовать функцию Tidal Live?',
-    description:
-      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: '/news/news-2.png',
-  },
-  {
-    id: 2,
-    title: 'Как мне использовать функцию Tidal Live?',
-    description:
-      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: '/news/news-3.png',
-  },
-  {
-    id: 3,
-    title: 'Как мне использовать функцию Tidal Live?',
-    description:
-      'Tidal — это платформа потокового вещания в высоком разрешении, которая предлагает множество функций.',
-    imgSrc: '/news/news-4.png',
-  },
-];
-
 export default function Home() {
+  const blogItems = BLOG_ITEMS.slice(0, 4);
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -120,7 +91,7 @@ export default function Home() {
         </div>
         <div className={styles.newsWrapper}>
           <div className={styles.newsList}>
-            {NEWS_LIST.map(item => (
+            {blogItems.map(item => (
               <NewsCard key={item.id} {...item} />
             ))}
           </div>
