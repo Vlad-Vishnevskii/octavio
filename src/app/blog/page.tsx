@@ -1,13 +1,13 @@
 import styles from './blog-page.module.scss';
 import { NewsCard, CatalogCard } from '../components';
-import { NEWS_ARR, PRODUCTS_LIST } from './constants';
+import { BLOG_ITEMS, PRODUCTS_LIST } from './constants';
 
 const Blog = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>БЛОГ</h1>
       <div className={styles.newsList}>
-        {NEWS_ARR.map(item => (
+        {BLOG_ITEMS.map(item => (
           <NewsCard key={item.id} {...item} />
         ))}
       </div>

@@ -44,9 +44,7 @@ export const Header = () => {
     return (
       <header className={classNames(styles.wrapper, styles.wrapper_grey)}>
         <div className={styles.container}>
-          <Link href="/">
-            <Image src={HEADER_IMG_PATHS.LOGO_BLACK} width={200} height={57} alt="OCTAVIO" />
-          </Link>
+          <Image src={HEADER_IMG_PATHS.LOGO_BLACK} width={200} height={57} alt="OCTAVIO" />
           <nav className={styles.nav}>
             <Link href="/">Главная</Link>
             <Link href="/blog">Блог</Link>
