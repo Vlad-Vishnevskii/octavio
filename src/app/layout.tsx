@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Montserrat, Unbounded } from 'next/font/google';
-import { Header, Footer } from './components';
+import { Header, Footer, YandexMetric } from './components';
 import Script from 'next/script';
 import './globals.scss';
 
@@ -40,6 +40,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <YandexMetric />
       </body>
     </html>
   );
