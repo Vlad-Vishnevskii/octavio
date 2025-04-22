@@ -4,7 +4,7 @@ export const BLOG_ITEMS = [
     title: 'Octavio Harmony: новое поколение объемного звучания',
     description:
       'Стоит один раз поменять обычную bluetooth-колонку на что-то посерьёзнее — и вы уже в другом измерении. Тут и усилители, и конвертеры, и загадочные «каналы». Кажется, чтобы собрать систему мечты, нужен диплом акустика. Но хорошие новости в том, что технологии становятся умнее — и сегодня объёмный звук можно получить без боли, паутины из проводов и Dolby Atmos. Octavio и Harmony — как раз об этом.',
-    imgSrc: '/posts/img/OctavioHarmony.jpg',
+    imgSrc: '/posts/img/Octavio-Harmony.webp',
     link: '/news?id=1',
     textPath: '/posts/Octavio-Harmony.md',
   },
@@ -37,8 +37,9 @@ export const BLOG_ITEMS = [
   },
   {
     id: 5,
-    title: 'Обзор Octavio Maestro от iamhear',
-    description: '',
+    title: 'Обзор акустики Octavio от Евгения Шведова iamhear ',
+    description:
+      'Наконец-то можно подробнее узнать про нашу новинку – активную беспроводную полочную акустику с функционалом стриминга, поддерживающая мультирум, совместимую с умным домом… ',
     iframe: 'https://dzen.ru/embed/onEYh0h0IAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0',
     imgSrc: '/news/news-1.png',
     link: '/news?id=5',
