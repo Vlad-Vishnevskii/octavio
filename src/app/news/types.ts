@@ -3,4 +3,5 @@ export interface BlogItemType {
   title: string;
   description: string;
   imgSrc: string;
+  iframe?: string;
 }
