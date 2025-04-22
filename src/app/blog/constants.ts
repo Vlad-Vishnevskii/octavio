@@ -69,13 +69,13 @@ export const PRODUCTS_LIST = [
   {
     id: 0,
     name: 'Octavio Maestro',
-    imgSrc: '/Maestro-Light/2.png',
+    imgSrc: '/Maestro-Light/2.webp',
     href: '/product/?id=maestro',
   },
   {
     id: 1,
     name: 'Octavio Amp',
-    imgSrc: '/Amp/8.png',
+    imgSrc: '/Amp/8.webp',
     href: '/product/?id=amp',
   },
   {

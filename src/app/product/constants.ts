@@ -7,11 +7,11 @@ export const PRODUCTS_PAGE_LIST = [
     images: [
       {
         color: ColorsTypes.white,
-        srcList: ['/Maestro-Light/2.png', '/Maestro-Light/1.png', '/Maestro-Light/3.png'],
+        srcList: ['/Maestro-Light/2.webp', '/Maestro-Light/1.webp', '/Maestro-Light/3.webp'],
       },
       {
         color: ColorsTypes.black,
-        srcList: ['/Maestro-Black/4.png', '/Maestro-Black/5.png', '/Maestro-Black/6.png'],
+        srcList: ['/Maestro-Black/4.webp', '/Maestro-Black/5.webp', '/Maestro-Black/6.webp'],
       },
     ],
     slogan:
@@ -79,7 +79,7 @@ export const PRODUCTS_PAGE_LIST = [
         id: 0,
         href: '/product?id=amp',
         name: 'Octavio Amp',
-        imgSrc: '/Amp/8.png',
+        imgSrc: '/Amp/8.webp',
       },
       {
         id: 1,
@@ -102,7 +102,7 @@ export const PRODUCTS_PAGE_LIST = [
     images: [
       {
         color: ColorsTypes.black,
-        srcList: ['/Amp/8.png', '/Amp/7.png', '/Amp/9.png'],
+        srcList: ['/Amp/8.webp', '/Amp/7.webp', '/Amp/9.webp'],
       },
     ],
     characteristics: [
@@ -151,7 +151,7 @@ export const PRODUCTS_PAGE_LIST = [
         id: 0,
         href: '/product?id=maestro',
         name: 'Octavio Maestro',
-        imgSrc: '/Maestro-Light/2.png',
+        imgSrc: '/Maestro-Light/2.webp',
       },
       {
         id: 1,
@@ -221,13 +221,13 @@ export const PRODUCTS_PAGE_LIST = [
         id: 0,
         href: '/product?id=maestro',
         name: 'Octavio Maestro',
-        imgSrc: '/Maestro-Light/2.png',
+        imgSrc: '/Maestro-Light/2.webp',
       },
       {
         id: 1,
         href: '/product?id=amp',
         name: 'Octavio Amp',
-        imgSrc: '/Amp/8.png',
+        imgSrc: '/Amp/8.webp',
       },
     ],
   },

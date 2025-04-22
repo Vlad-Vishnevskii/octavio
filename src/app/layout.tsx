@@ -19,8 +19,9 @@ const unbounded = Unbounded({
 });
 
 export const metadata: Metadata = {
-  title: 'Octavio',
-  description: 'Octavio – это Hi-Fi компоненты',
+  title: 'Hi-Fi компоненты Octavio: цифровой звук без сложностей',
+  description:
+    'Откройте мир Hi-Fi с Octavio! Легкая установка, мультирум, отличное звучание и поддержка всех стриминговых платформ...',
 };
 
 export default function RootLayout({
@@ -31,6 +32,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
+        <meta property="og:image" content="/link-icon.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+        <link rel="icon" sizes="16x16 32x32 48x48 64x64" type="image/svg+xml" href="/favicon.svg" />
         <Script
           strategy="beforeInteractive"
           src="https://api-maps.yandex.ru/2.1/?apikey=3f26b556-b203-412e-aba8-23955b6433f7&lang=ru-RU"

@@ -21,11 +21,11 @@ export default function Home() {
           <div className={styles.cardFull}></div>
           <CatalogCard
             name="Octavio Maestro"
-            imgSrc="/Maestro-Light/2.png"
+            imgSrc="/Maestro-Light/2.webp"
             href="/product/?id=maestro"
             className={styles.cardFull}
           />
-          <CatalogCard href="/product/?id=amp" name="Octavio Amp" imgSrc="/Amp/8.png" />
+          <CatalogCard href="/product/?id=amp" name="Octavio Amp" imgSrc="/Amp/8.webp" />
           <CatalogCard href="/product/?id=stream" name="Octavio StreamG2" imgSrc="/Stream/1.png" />
         </div>
       </section>
