@@ -22,11 +22,11 @@ export default function Home() {
           <CatalogCard
             name="Octavio Maestro"
             imgSrc="/Maestro-Light/2.webp"
-            href="/product/?id=maestro"
+            href="/product/maestro"
             className={styles.cardFull}
           />
-          <CatalogCard href="/product/?id=amp" name="Octavio Amp" imgSrc="/Amp/8.webp" />
-          <CatalogCard href="/product/?id=stream" name="Octavio StreamG2" imgSrc="/Stream/1.png" />
+          <CatalogCard href="/product/amp" name="Octavio Amp" imgSrc="/Amp/8.webp" />
+          <CatalogCard href="/product/stream" name="Octavio StreamG2" imgSrc="/Stream/1.png" />
         </div>
       </section>
       <section className={styles.about}>

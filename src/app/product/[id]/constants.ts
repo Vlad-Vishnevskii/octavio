@@ -77,17 +77,22 @@ export const PRODUCTS_PAGE_LIST = [
     otherProducts: [
       {
         id: 0,
-        href: '/product?id=amp',
+        href: '/product/amp',
         name: 'Octavio Amp',
         imgSrc: '/Amp/8.webp',
       },
       {
         id: 1,
-        href: '/product?id=stream',
+        href: '/product/stream',
         name: 'Octavio StreamG2',
         imgSrc: '/Stream/1.png',
       },
     ],
+    metadata: {
+      title: 'Octavio Maestro - компактная активная Hi-Fi аудиосистема',
+      description:
+        'Octavio Maestro объединяет Hi-Fi колонки и технологии стриминга для качественного звука. Идеально для одиночной конфигурации, стереопары и мультирума',
+    },
   },
   {
     id: 'amp',
@@ -149,17 +154,22 @@ export const PRODUCTS_PAGE_LIST = [
     otherProducts: [
       {
         id: 0,
-        href: '/product?id=maestro',
+        href: '/product/maestro',
         name: 'Octavio Maestro',
         imgSrc: '/Maestro-Light/2.webp',
       },
       {
         id: 1,
-        href: '/product?id=stream',
+        href: '/product/stream',
         name: 'Octavio StreamG2',
         imgSrc: '/Stream/1.png',
       },
     ],
+    metadata: {
+      title: 'Octavio Amp – компактный усилитель для стриминга Hi-Fi музыки',
+      description:
+        'Octavio Amp соединяет аналоговый и цифровой мир. Наслаждайтесь любимыми плейлистами в Hi-Fi качестве с Wi-Fi стримингом!',
+    },
   },
   {
     id: 'stream',
@@ -219,16 +229,21 @@ export const PRODUCTS_PAGE_LIST = [
     otherProducts: [
       {
         id: 0,
-        href: '/product?id=maestro',
+        href: '/product/maestro',
         name: 'Octavio Maestro',
         imgSrc: '/Maestro-Light/2.webp',
       },
       {
         id: 1,
-        href: '/product?id=amp',
+        href: '/product/amp',
         name: 'Octavio Amp',
         imgSrc: '/Amp/8.webp',
       },
     ],
+    metadata: {
+      title: 'Octavio Stream G2 — мощный стример с поддержкой всех сервисов',
+      description:
+        'description" content="Octavio Stream G2 — простой в использовании стример с интуитивно понятным интерфейсом и поддержкой всех современных стандартов',
+    },
   },
 ];

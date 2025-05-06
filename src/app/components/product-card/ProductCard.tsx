@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useSwiper } from 'swiper/react';
 import Image from 'next/image';
-import { ImageItem } from '@/app/product/types';
+import { ImageItem } from '@/app/product/[id]/types';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
