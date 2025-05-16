@@ -5,7 +5,7 @@ import Modal from 'react-modal';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PolicyText } from '../policy-content';
-
+import { ScrollFadeIn } from '../scroll-fade-in';
 import styles from './footer.module.scss';
 
 export const Footer = () => {
@@ -27,38 +27,47 @@ export const Footer = () => {
     <footer className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.top}>
-          <Image src="/octavio-logo-white.webp" width={200} height={57} alt="OCTAVIO" />
+          <ScrollFadeIn delay={0.2}>
+            <Image src="/octavio-logo-white.webp" width={200} height={57} alt="OCTAVIO" />
+          </ScrollFadeIn>
 
-          <nav className={styles.nav}>
-            <p className={styles.nav_title}>Инфо</p>
-            <Link className={styles.nav_item} href="/">
-              Главная
-            </Link>
-            <Link className={styles.nav_item} href="/blog">
-              Блог
-            </Link>
-            <Link className={styles.nav_item} href="/map">
-              Где купить?
-            </Link>
-          </nav>
+          <ScrollFadeIn delay={0.2}>
+            <nav className={styles.nav}>
+              <p className={styles.nav_title}>Инфо</p>
+              <Link className={styles.nav_item} href="/">
+                Главная
+              </Link>
+              <Link className={styles.nav_item} href="/blog">
+                Блог
+              </Link>
+              <Link className={styles.nav_item} href="/map">
+                Где купить?
+              </Link>
+            </nav>
+          </ScrollFadeIn>
 
-          <div className={styles.info}>
-            <p>Официальный дистрибьютер</p>
-            <p>ООО ТК “Технологика”</p>
-            <a href="https://tl-sound.ru/">tl-sound.ru</a>
-          </div>
-          <ul className={styles.contacts}>
-            <li className={styles.contacts_item}>
-              <a className={styles.contacts_link} href="tel:88007003334">
-                {'8 (800) 700-33-34'}
-              </a>
-            </li>
-            <li className={styles.contacts_item}>
-              <a className={styles.contacts_link} href="mailto:info@tl-sound.ru">
-                info@tl-sound.ru
-              </a>
-            </li>
-          </ul>
+          <ScrollFadeIn delay={0.2}>
+            <div className={styles.info}>
+              <p>Официальный дистрибьютер</p>
+              <p>ООО ТК “Технологика”</p>
+              <a href="https://tl-sound.ru/">tl-sound.ru</a>
+            </div>
+          </ScrollFadeIn>
+
+          <ScrollFadeIn delay={0.2}>
+            <ul className={styles.contacts}>
+              <li className={styles.contacts_item}>
+                <a className={styles.contacts_link} href="tel:88007003334">
+                  {'8 (800) 700-33-34'}
+                </a>
+              </li>
+              <li className={styles.contacts_item}>
+                <a className={styles.contacts_link} href="mailto:info@tl-sound.ru">
+                  info@tl-sound.ru
+                </a>
+              </li>
+            </ul>
+          </ScrollFadeIn>
         </div>
         <div className={styles.bottom}>
           <p>©Octavio 2025</p>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowTopRight } from '@/app/icons';
+import { ScrollFadeIn } from '../scroll-fade-in';
 import styles from './news-card.module.scss';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 export const NewsCard: React.FC<Props> = ({ imgSrc, title, description, link = '/blog' }) => {
   return (
-    <div className={styles.wrapper}>
+    <ScrollFadeIn className={styles.wrapper} delay={0.4}>
       <div className={styles.imgContainer}>
         <Image src={imgSrc} alt="news" width={398} height={294} />
         <Link href={link} className={styles.arrowIcon}>
@@ -24,6 +25,6 @@ export const NewsCard: React.FC<Props> = ({ imgSrc, title, description, link = '
       <Link className={styles.readBtn} href={link}>
         Читать
       </Link>
-    </div>
+    </ScrollFadeIn>
   );
 };

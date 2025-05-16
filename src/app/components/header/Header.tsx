@@ -7,6 +7,7 @@ import { HEADER_IMG_PATHS } from './Header.constants';
 import { ArrowRight, BurgerIcon, CloseIcon } from '@/app/icons';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { ScrollFadeIn } from '../scroll-fade-in';
 import classNames from 'classnames';
 
 export const Header = () => {
@@ -125,18 +126,24 @@ export const Header = () => {
 
       <section className={styles.bottom}>
         <div className={styles.bottomLeft}>
-          <h1 className={styles.title}>
-            <b>Octavio</b> – это <span>{'Hi\u2011Fi'}</span> компоненты для современной жизни.
-          </h1>
-          <p className={styles.description}>
-            Бескомпромиссное звучание не требует сложной установки, специальных знаний и грандиозных
-            вложений. Наслаждайтесь контентом со всех стриминговых платформ или подарите вторую
-            жизнь своей музыкальной коллекции. Hi-Fi c Octavio — это просто!
-          </p>
-          <button onClick={scrollToProducts} className={styles.btn}>
-            К товарам
-            <ArrowRight />
-          </button>
+          <ScrollFadeIn>
+            <h1 className={styles.title}>
+              <b>Octavio</b> – это <span>{'Hi\u2011Fi'}</span> компоненты для современной жизни.
+            </h1>
+          </ScrollFadeIn>
+          <ScrollFadeIn delay={0.2}>
+            <p className={styles.description}>
+              Бескомпромиссное звучание не требует сложной установки, специальных знаний и
+              грандиозных вложений. Наслаждайтесь контентом со всех стриминговых платформ или
+              подарите вторую жизнь своей музыкальной коллекции. Hi-Fi c Octavio — это просто!
+            </p>
+          </ScrollFadeIn>
+          <ScrollFadeIn delay={0.4}>
+            <button onClick={scrollToProducts} className={styles.btn}>
+              К товарам
+              <ArrowRight />
+            </button>
+          </ScrollFadeIn>
         </div>
         <Image
           className={styles.productImg}

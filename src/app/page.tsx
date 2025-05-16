@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Image from 'next/image';
-import { CatalogCard, NewsCard } from './components';
+import { CatalogCard, NewsCard, ScrollFadeIn } from './components';
 import { BLOG_ITEMS } from './blog/constants';
 import { PenIcon, MusicIcon, CpuIcon, HandsIcon, ArrowRight } from './icons';
 import Link from 'next/link';
@@ -16,7 +16,10 @@ export default function Home() {
   return (
     <div className={styles.wrapper}>
       <section className={styles.calaog} id="products">
-        <h2 className={styles.title}>КАТАЛОГ ТОВАРОВ</h2>
+        <ScrollFadeIn>
+          <h2 className={styles.title}>КАТАЛОГ ТОВАРОВ</h2>
+        </ScrollFadeIn>
+
         <div className={styles.catalogList}>
           <div className={styles.cardFull}></div>
           <CatalogCard
@@ -26,13 +29,16 @@ export default function Home() {
             className={styles.cardFull}
           />
           <CatalogCard href="/product/amp" name="Octavio Amp" imgSrc="/Amp/8.webp" />
+
           <CatalogCard href="/product/stream" name="Octavio StreamG2" imgSrc="/Stream/1.png" />
         </div>
       </section>
       <section className={styles.about}>
-        <div className={styles.about_left}>
-          <Image src="/main-page/about-bg.png" alt="bg" width={980} height={892} />
-        </div>
+        <ScrollFadeIn delay={0.4}>
+          <div className={styles.about_left}>
+            <Image src="/main-page/about-bg.png" alt="bg" width={980} height={892} />
+          </div>
+        </ScrollFadeIn>
         <div className={styles.aboutRight}>
           <Image
             src="/main-page/about-ellipse.png"
@@ -41,46 +47,56 @@ export default function Home() {
             height={641}
             alt="ellipce"
           />
-          <h3 className={styles.aboutTitle}>О нас</h3>
-          <p className={styles.aboutDescription}>
-            Мы соединили уважение к традициям звуковоспроизведения с инновационными технологиями,
-            чтобы вы могли услышать каждую ноту так, как она была задумана. В сердце акустических
-            систем Octavio знаменитые динамики Davis Acoustics, что делает их звучание по-настоящему
-            безупречным
-          </p>
-          <ul className={styles.aboutAdvantages}>
-            <li className={styles.aboutAdvantagesItem}>
-              <PenIcon />
-              <span>
-                <b>Система Harmony:</b> анализирует и преобразует аудиосигнал любого контента
-                (музыки, фильмов, подкастов, видеоигр и т. д.) для иммерсивного пространственного
-                воспроизведения
-              </span>
-            </li>
-            <li className={styles.aboutAdvantagesItem}>
-              <MusicIcon />
-              <span>
-                <b>Link Play:</b> Поддержка Spotify, Apple Music, Deezer, Qobuz, Tidal и др. —
-                наслаждайтесь музыкой без ограничений
-              </span>
-            </li>
-            <li className={styles.aboutAdvantagesItem}>
-              <CpuIcon />
-              <span>
-                <b>Поддержка мультирум:</b> Hi-Fi звучание и беспрерывная трансляция контента в
-                любой точке вашего дома
-              </span>
-            </li>
-            <li className={styles.aboutAdvantagesItem}>
-              <HandsIcon />
-              <span>
-                <b>Совместимость с системой умного дома:</b> голосовое управление и множество других
-                функций, делающих вашу жизнь проще
-              </span>
-            </li>
-          </ul>
+          <ScrollFadeIn delay={0.2}>
+            <h3 className={styles.aboutTitle}>О нас</h3>
+          </ScrollFadeIn>
+          <ScrollFadeIn delay={0.4}>
+            <p className={styles.aboutDescription}>
+              Мы соединили уважение к традициям звуковоспроизведения с инновационными технологиями,
+              чтобы вы могли услышать каждую ноту так, как она была задумана. В сердце акустических
+              систем Octavio знаменитые динамики Davis Acoustics, что делает их звучание
+              по-настоящему безупречным
+            </p>
+          </ScrollFadeIn>
+          <ScrollFadeIn delay={0.4}>
+            <ul className={styles.aboutAdvantages}>
+              <li className={styles.aboutAdvantagesItem}>
+                <PenIcon />
+                <span>
+                  <b>Система Harmony:</b> анализирует и преобразует аудиосигнал любого контента
+                  (музыки, фильмов, подкастов, видеоигр и т. д.) для иммерсивного пространственного
+                  воспроизведения
+                </span>
+              </li>
+
+              <li className={styles.aboutAdvantagesItem}>
+                <MusicIcon />
+                <span>
+                  <b>Link Play:</b> Поддержка Spotify, Apple Music, Deezer, Qobuz, Tidal и др. —
+                  наслаждайтесь музыкой без ограничений
+                </span>
+              </li>
+
+              <li className={styles.aboutAdvantagesItem}>
+                <CpuIcon />
+                <span>
+                  <b>Поддержка мультирум:</b> Hi-Fi звучание и беспрерывная трансляция контента в
+                  любой точке вашего дома
+                </span>
+              </li>
+
+              <li className={styles.aboutAdvantagesItem}>
+                <HandsIcon />
+                <span>
+                  <b>Совместимость с системой умного дома:</b> голосовое управление и множество
+                  других функций, делающих вашу жизнь проще
+                </span>
+              </li>
+            </ul>
+          </ScrollFadeIn>
         </div>
       </section>
+
       <section className={styles.news}>
         <div className={styles.newsTop}>
           <h2 className={styles.newsTitle}>НОВОСТИ</h2>

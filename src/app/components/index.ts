@@ -6,3 +6,4 @@ export * from './map';
 export * from './loader';
 export * from './product-card';
 export * from './metric';
+export * from './scroll-fade-in';
