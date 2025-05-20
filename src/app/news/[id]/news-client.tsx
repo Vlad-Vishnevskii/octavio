@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { ScrollFadeIn } from '@/app/components';
 import styles from './news-page.module.scss';
 
 type Props = {
@@ -29,30 +30,38 @@ export const NewsClient = ({ blog }: Props) => {
   return (
     <div className={styles.wrapper}>
       {blog?.iframe ? (
-        <div className={styles.iframeWrapper}>
-          <iframe
-            src={blog.iframe}
-            allow="fullscreen; gyroscope; encrypted-media"
-            data-testid="embed-iframe"
-            loading="lazy"
-            title="Обзор Octavio Maestro от iamhear"
-          />
-        </div>
+        <ScrollFadeIn>
+          <div className={styles.iframeWrapper}>
+            <iframe
+              src={blog.iframe}
+              allow="fullscreen; gyroscope; encrypted-media"
+              data-testid="embed-iframe"
+              loading="lazy"
+              title="Обзор Octavio Maestro от iamhear"
+            />
+          </div>
+        </ScrollFadeIn>
       ) : (
         <div className={styles.frame}>
-          <Image
-            src={blog?.imgSrc ?? '/news/news-1.png'}
-            alt="Tidal Live Screenshot"
-            width={400}
-            height={659}
-            className={styles.image}
-          />
+          <ScrollFadeIn delay={0.2}>
+            <Image
+              src={blog?.imgSrc ?? '/news/news-1.png'}
+              alt="Tidal Live Screenshot"
+              width={400}
+              height={659}
+              className={styles.image}
+            />
+          </ScrollFadeIn>
 
           <div className={styles.content}>
-            <h2 className={styles.title}>{blog?.title}</h2>
-            <div className={styles.description}>
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{textContent}</ReactMarkdown>
-            </div>
+            <ScrollFadeIn delay={0.4}>
+              <h2 className={styles.title}>{blog?.title}</h2>
+            </ScrollFadeIn>
+            <ScrollFadeIn delay={0.4}>
+              <div className={styles.description}>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{textContent}</ReactMarkdown>
+              </div>
+            </ScrollFadeIn>
           </div>
         </div>
       )}
