@@ -17,8 +17,6 @@ export const NewsClient = ({ blog }: Props) => {
   const [textContent, setTextContent] = useState('');
   const router = useRouter();
 
-  console.log(blog);
-
   useEffect(() => {
     if (blog.textPath) {
       fetch(blog.textPath)
