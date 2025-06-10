@@ -83,6 +83,20 @@ export const BLOG_ITEMS = [
       description: 'Смотрите обзор Hi-Fi акустики Octavio Maestro от эксперта салона Pult.ru',
     },
   },
+  {
+    id: 7,
+    title: 'Octavio на Hi-Fi & High End Show 2025: запоминающаяся премьера',
+    description:
+      'Экспозиция бренда Octavio на выставке Hi-Fi & High End Show Урал 2025 в Екатеринбурге',
+    imgSrc: '/news/news-7.webp',
+    link: '/news/7',
+    textPath: '/posts/blog-7.md',
+    metaData: {
+      title: 'Octavio на Hi-Fi & High End Show 2025: запоминающаяся премьера',
+      description:
+        'Экспозиция бренда Octavio на выставке Hi-Fi & High End Show Урал 2025 в Екатеринбурге',
+    },
+  },
 ];
 
 export const PRODUCTS_LIST = [
