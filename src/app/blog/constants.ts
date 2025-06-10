@@ -104,18 +104,18 @@ export const PRODUCTS_LIST = [
     id: 0,
     name: 'Octavio Maestro',
     imgSrc: '/Maestro-Light/2.webp',
-    href: '/product/?id=maestro',
+    href: '/product/maestro',
   },
   {
     id: 1,
     name: 'Octavio Amp',
     imgSrc: '/Amp/8.webp',
-    href: '/product/?id=amp',
+    href: '/product/amp',
   },
   {
     id: 2,
     name: 'Octavio StreamG2',
     imgSrc: '/Stream/1.png',
-    href: '/product/?id=stream',
+    href: '/product/stream',
   },
 ];

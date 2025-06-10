@@ -22,7 +22,7 @@ export const CatalogCard: React.FC<Props> = ({
 }) => {
   return (
     <ScrollFadeIn className={classNames(styles.wrapper, className)}>
-      <Link href={href} className={classNames(styles.wrapper, className)}>
+      <Link href={href}>
         <div
           className={classNames(styles.linkIcon, {
             [styles.linkIcon_small]: smallArrow,
