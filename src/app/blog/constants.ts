@@ -97,6 +97,21 @@ export const BLOG_ITEMS = [
         'Экспозиция бренда Octavio на выставке Hi-Fi & High End Show Урал 2025 в Екатеринбурге',
     },
   },
+  {
+    id: 8,
+    title: 'Обзор Octavio Amp от Slava Milk',
+    description:
+      'Интегральный усилитель с компактным корпусом, поддержкой Wi-Fi стриминга, фирменным приложением и собранные во Франции. Рассказал про бренд, особенности использования и все такое прочее. Приятного просмотра!',
+    iframe: 'https://dzen.ru/embed/oP0bFL0MIAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0',
+    imgSrc: '/news/news-8.webp',
+    link: '/news/8',
+    textPath: '',
+    metaData: {
+      title: 'Обзор Octavio Amp от Slava Milk',
+      description:
+        'Интегральный усилитель с компактным корпусом, поддержкой Wi-Fi стриминга, фирменным приложением и собранные во Франции.',
+    },
+  },
 ];
 
 export const PRODUCTS_LIST = [
