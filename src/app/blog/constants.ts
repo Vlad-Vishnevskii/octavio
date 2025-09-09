@@ -126,6 +126,21 @@ export const BLOG_ITEMS = [
         'Octavio AMP: изучаем внутренний мир высокотехнологичного компактного усилителя с поддержкой стриминговых сервисов и мультирум',
     },
   },
+  {
+    id: 10,
+    title: 'Octavio Amp и Davis Ariane 2',
+    description:
+      'Обзор удобного и компактного комплекта от Максима Наумова: усилитель со стримингом Octavio Amp и акустика Davis Ariane 2',
+    iframe: 'https://dzen.ru/embed/oEkbbjgwJAAA?from_block=partner&from=zen&mute=0&autoplay=0&tv=0',
+    imgSrc: '/news/news-10.webp',
+    link: '/news/10',
+    textPath: '',
+    metaData: {
+      title: 'Удобный комплект: Octavio Amp и Davis Ariane 2',
+      description: 'Обзор и тест стримингового усилителя Octavio Amp с акустикой Davis Ariane 2',
+    },
+  },
+
 ];
 
 export const PRODUCTS_LIST = [
