@@ -35,7 +35,7 @@ export const NewsClient = ({ blog }: Props) => {
               allow="fullscreen; gyroscope; encrypted-media"
               data-testid="embed-iframe"
               loading="lazy"
-              title="Обзор Octavio Maestro от iamhear"
+              title={blog.title}
             />
           </div>
         </ScrollFadeIn>
